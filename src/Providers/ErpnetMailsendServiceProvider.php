@@ -46,7 +46,7 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
         ]);
 
         //Routing
-        include $routesDir."api.php";
+//        include $routesDir."api.php";
         include $routesDir."web.php";
 
     }
