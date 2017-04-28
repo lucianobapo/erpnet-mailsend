@@ -39,6 +39,7 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
 //            }
 //        }
 
+        logger($viewsDir);
         $this->loadViewsFrom($viewsDir, 'mailsend');
 
         $this->publishes([
