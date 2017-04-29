@@ -22,6 +22,8 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
         $configPath = $projectRootDir . 'config/erpnetMailsend.php';
         $this->mergeConfigFrom($configPath, 'erpnetMailsend');
 
+        $app['config']->set('database.connections', array_merge(config('erpnetMailsend.connections'), config('database.connections')));
+
         logger(config('database.connections'));
 
         //Publish Config
