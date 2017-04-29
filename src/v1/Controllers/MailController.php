@@ -15,8 +15,6 @@ class MailController extends Controller
     }
 
     /**
-     * @param string $provider
-     * @param string $id
      * @return \Illuminate\Contracts\View\View | \Illuminate\Http\Response
      */
     public function index(Request $request)

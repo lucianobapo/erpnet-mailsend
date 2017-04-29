@@ -19,13 +19,15 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
         $routesDir = $projectRootDir."routes".DIRECTORY_SEPARATOR;
         $viewsDir = $projectRootDir."resources/views".DIRECTORY_SEPARATOR;
 
-//        $configPath = $projectRootDir . 'config/erpnetModels.php';
-//        $this->mergeConfigFrom($configPath, 'erpnetModels');
+        $configPath = $projectRootDir . 'config/erpnetMailsend.php';
+        $this->mergeConfigFrom($configPath, 'erpnetMailsend');
+
+        logger(config('database.connections'));
 
         //Publish Config
-//        $this->publishes([
-//            $projectRootDir.'config/erpnetModels.php' => config_path('erpnetModels.php')
-//        ], 'config');
+        $this->publishes([
+            $projectRootDir.'config/erpnetMailsend.php' => config_path('erpnetMailsend.php')
+        ], 'config');
 
         //Bind Interfaces
 //        $app->bind($bindInterface, $bindRepository);
@@ -44,7 +46,7 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
 
         $this->publishes([
             $viewsDir => base_path('resources/views/vendor/mailsend'),
-        ]);
+        ], 'views');
 
         //Routing
 //        include $routesDir."api.php";
