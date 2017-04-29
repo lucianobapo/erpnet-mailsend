@@ -21,7 +21,15 @@
                 <div class="panel-body">
                     <div class="container" id="manage-vue">
                         <div class="row">
-                            <div v-for="item in items">
+                            <div v-for="item in items" class="well-sm">
+                                <div class="pull-right">
+                                    <button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
+                                        <span class="glyphicon glyphicon-edit"></span> Edit
+                                    </button>
+                                    <button disabled class="edit-modal btn btn-danger" @click.prevent="deleteItem(item)">
+                                        <span class="glyphicon glyphicon-trash"></span> Delete
+                                    </button>
+                                </div>
                                 <ul>
                                     <li>@{{ item.username }}</li>
                                     <li>@{{ item.email }}</li>
