@@ -12,21 +12,24 @@
                         <div class="col-md-12">
                             <h1>Mensagens Tigresa VIP</h1>
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <textarea>Digite o conteúdo do email...</textarea>
+                    <button disabled type="button" class="btn btn-primary pull-right">
+                        Enviar Mensagem
+                    </button>
+                </div>
+                <div class="panel-footer" id="manage-vue">
+                    <h2>Lista de usuários:</h2>
+                    <div class="row">
                         <div class="col-md-12">
                             <button disabled type="button" data-toggle="modal" data-target="#create-item" class="btn btn-primary">
                                 Novo Item
                             </button>
                         </div>
-                    </div>
-                </div>
-
-                <div class="panel-body">
-                    <textarea placeholder="Digite o conteúdo do email..."></textarea>
-
-                </div>
-                <div class="panel-footer" id="manage-vue">
-                    <h2>Lista de usuários:</h2>
-                    <div class="row">
                         <div v-for="item in items" class="col-md-12">
                             <div class="pull-right">
                                 <button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
