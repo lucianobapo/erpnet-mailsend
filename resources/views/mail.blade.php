@@ -32,11 +32,15 @@
                     <tr>
                         <th>username</th>
                         <th>email</th>
+                        <th>status</th>
+                        <th>facebook_id</th>
                         <th>Actions</th>
                     </tr>
                     <tr v-for="item in items">
                         <td>@{{ item.username }}</td>
                         <td>@{{ item.email }}</td>
+                        <td>@{{ item.status }}</td>
+                        <td>@{{ item.facebook_id }}</td>
                         <td>
                             <button class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
                                 <span class="glyphicon glyphicon-edit"></span> Edit
