@@ -18,6 +18,7 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
         $projectRootDir = __DIR__.DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR."..".DIRECTORY_SEPARATOR;
         $routesDir = $projectRootDir."routes".DIRECTORY_SEPARATOR;
         $viewsDir = $projectRootDir."resources/views".DIRECTORY_SEPARATOR;
+        dd($viewsDir);
 
 //        $configPath = $projectRootDir . 'config/erpnetModels.php';
 //        $this->mergeConfigFrom($configPath, 'erpnetModels');
@@ -39,7 +40,7 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
 //            }
 //        }
 
-        logger($viewsDir);
+
         $this->loadViewsFrom($viewsDir, 'mailsend');
 
         $this->publishes([
