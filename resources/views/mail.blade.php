@@ -1,5 +1,23 @@
 @extends('layouts.app')
 
+@section('stylesheet')
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+@endsection
+
+@section('javascript')
+    <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script async defer type="text/javascript" src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>
+    <script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wysihtml5/0.3.0/wysihtml5.min.js"></script>
+    <script type="text/javascript">
+        var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
+            toolbar:      "wysihtml5-toolbar", // id of toolbar element
+            parserRules:  wysihtml5ParserRules // defined in parser rules set
+        });
+    </script>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -8,7 +26,7 @@
                 <div class="panel-heading">
                     <div class="form-group row add">
                         <div class="col-md-12">
-                            <h1>Lista de usuários Tigresa VIP</h1>
+                            <h1>Mensagens Tigresa VIP</h1>
                         </div>
                         <div class="col-md-12">
                             <button disabled type="button" data-toggle="modal" data-target="#create-item" class="btn btn-primary">
@@ -18,7 +36,31 @@
                     </div>
                 </div>
 
-                <div class="panel-body" id="manage-vue">
+                <div class="panel-body">
+                    <div id="wysihtml5-toolbar" style="display: none;">
+                        <a data-wysihtml5-command="bold">bold</a>
+                        <a data-wysihtml5-command="italic">italic</a>
+
+                        <!-- Some wysihtml5 commands require extra parameters -->
+                        <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red">red</a>
+                        <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green">green</a>
+                        <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue">blue</a>
+
+                        <!-- Some wysihtml5 commands like 'createLink' require extra paramaters specified by the user (eg. href) -->
+                        <a data-wysihtml5-command="createLink">insert link</a>
+                        <div data-wysihtml5-dialog="createLink" style="display: none;">
+                            <label>
+                                Link:
+                                <input data-wysihtml5-dialog-field="href" value="http://" class="text">
+                            </label>
+                            <a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+                        </div>
+                    </div>
+
+                    <textarea id="wysihtml5-textarea" placeholder="Enter your text ..." autofocus></textarea>
+                </div>
+                <div class="panel-footer" id="manage-vue">
+                    <h2>Lista de usuários:</h2>
                     <div class="row">
                         <div v-for="item in items" class="col-md-12">
                             <div class="pull-right">
@@ -30,10 +72,10 @@
                                 </button>
                             </div>
                             <ul>
-                                <li>@{{ item.username }}</li>
-                                <li>@{{ item.email }}</li>
-                                <li>@{{ item.status }}</li>
-                                <li>@{{ item.facebook_id }}</li>
+                                <li>Username: @{{ item.username }}</li>
+                                <li>Email: @{{ item.email }}</li>
+                                <li>Status: @{{ item.status }}</li>
+                                <li>Facebook: @{{ item.facebook_id }}</li>
                             </ul>
                         </div>
 
