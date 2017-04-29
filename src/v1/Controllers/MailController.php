@@ -25,7 +25,7 @@ class MailController extends Controller
      *
      * @return \Illuminate\Contracts\View\View | \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         $items = UserMailsend::paginate(3);
 

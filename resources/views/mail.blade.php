@@ -17,10 +17,14 @@
                 </div>
 
                 <div class="panel-body">
-                    <textarea>Digite o conteúdo do email...</textarea>
-                    <button disabled type="button" class="btn btn-primary pull-right">
-                        Enviar Mensagem
-                    </button>
+                    <div class="row">
+                        <div class="col-md-12"><textarea>Digite o conteúdo do email...</textarea></div>
+                        <div class="col-md-12">
+                            <button disabled type="button" class="btn btn-primary pull-right">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="panel-footer" id="manage-vue">
                     <h2>Lista de usuários:</h2>
