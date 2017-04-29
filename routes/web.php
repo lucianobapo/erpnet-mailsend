@@ -28,9 +28,10 @@ $router = app(Router::class);
 
 $router->group($routeConfig, function(Router $router) {
     $router->get('mail', [
-        'uses' => 'MailController@index',
-        'as' => 'mail.index',
+        'uses' => 'MailController@manageVue',
+        'as' => 'mail.manageVue',
     ]);
+    $router->resource('vueitems', 'MailController');
 
 //    $router->resource('partners', 'PartnersController');
 

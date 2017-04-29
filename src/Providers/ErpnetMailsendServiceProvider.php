@@ -24,8 +24,6 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
 
         $app['config']->set('database.connections', array_merge(config('erpnetMailsend.connections'), config('database.connections')));
 
-        logger(config('database.connections'));
-
         //Publish Config
         $this->publishes([
             $projectRootDir.'config/erpnetMailsend.php' => config_path('erpnetMailsend.php')
@@ -42,7 +40,6 @@ class ErpnetMailsendServiceProvider extends ServiceProvider
 //                $app->bind($bindInterface, $bindRepository);
 //            }
 //        }
-
 
         $this->loadViewsFrom($viewsDir, 'mailsend');
 
