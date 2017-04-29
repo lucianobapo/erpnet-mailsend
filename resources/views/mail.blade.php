@@ -19,6 +19,8 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12"><textarea>Digite o conteúdo do email...</textarea></div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">
                             <button disabled type="button" class="btn btn-primary pull-right">
                                 Enviar Mensagem
