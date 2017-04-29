@@ -174,44 +174,7 @@
     {{--<script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>--}}
     {{--<script async defer type="text/javascript" src="https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js"></script>--}}
     {{--<script async defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wysihtml5/0.3.0/wysihtml5.min.js"></script>--}}
-    <script type="text/javascript">
 
-        (function(doc, elementName) {
-            var elToInsert,
-                fjs = doc.getElementsByTagName(elementName)[0],
-                addScript = function(url, id) {
-                    if (doc.getElementById(id)) {return;}
-                    elToInsert = doc.createElement('script');
-                    elToInsert.src = url;
-                    elToInsert.type = 'text/javascript';
-                    elToInsert.async = 'true';
-                    elToInsert.defer = 'true';
-                    id && (elToInsert.id = id);
-                    fjs.parentNode.insertBefore(elToInsert, fjs);
-                };
-            addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js');
-            addScript('https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js');
-            addScript('https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js');
-            addScript('https://cdn.jsdelivr.net/vue.resource/0.9.3/vue-resource.min.js');
-            addScript('https://cdnjs.cloudflare.com/ajax/libs/wysihtml5/0.3.0/wysihtml5.min.js');
-//            addScript('https://connect.facebook.net/pt_BR/sdk.js', 'facebook-jssdk');
-//            addScript('https://apis.google.com/js/platform.js?publisherid=103256085356577396632&onload=gapiOnLoadCallback');
-//        addScript('https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js');
-//        addScript('https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/shim.min.js');
-//        addScript('build/polyfills.js');
-//        addScript('https://cdn.polyfill.io/v2/polyfill.js?features=Intl.~locale.pt-BR');
-//        addScript('build/main.js');
-            var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
-                toolbar:      "wysihtml5-toolbar", // id of toolbar element
-                parserRules:  wysihtml5ParserRules // defined in parser rules set
-            });
-        }(document, 'script'));
-
-//        var editor = new wysihtml5.Editor("wysihtml5-textarea", { // id of textarea element
-//            toolbar:      "wysihtml5-toolbar", // id of toolbar element
-//            parserRules:  wysihtml5ParserRules // defined in parser rules set
-//        });
-    </script>
 
 
 @endsection
