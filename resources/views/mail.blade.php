@@ -21,16 +21,8 @@
                 </div>
 
                 <div class="panel-body">
-                    <!-- toolbar with suitable buttons and dialogues -->
-                    <div id="toolbar">
-                        <a data-wysihtml5-command="bold">bold</a>
-                        <a data-wysihtml5-command="italic">italic</a>
-                        <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">H1</a>
-                        <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
-                    </div>
+                    <textarea>Next, get a free TinyMCE Cloud API key!</textarea>
 
-                    <!-- element to edit -->
-                    <div id="editor" data-placeholder="Go on, start editing..."></div>
                 </div>
                 <div class="panel-footer" id="manage-vue">
                     <h2>Lista de usuários:</h2>
