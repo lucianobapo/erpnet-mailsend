@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <textarea>Next, get a free TinyMCE Cloud API key!</textarea>
+                    <textarea placeholder="Digite o conteúdo do email..."></textarea>
 
                 </div>
                 <div class="panel-footer" id="manage-vue">
