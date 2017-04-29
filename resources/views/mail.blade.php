@@ -20,34 +20,40 @@
 
                 <div class="panel-body">
                     <div class="container" id="manage-vue">
-
-
                         <div class="row">
-                            <div class="table-responsive">
-                                <table class="table table-borderless">
-                                    <tr>
-                                        <th>username</th>
-                                        <th>email</th>
-                                        <th>status</th>
-                                        <th>facebook_id</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                    <tr v-for="item in items">
-                                        <td>@{{ item.username }}</td>
-                                        <td>@{{ item.email }}</td>
-                                        <td>@{{ item.status }}</td>
-                                        <td>@{{ item.facebook_id }}</td>
-                                        <td>
-                                            <button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
-                                                <span class="glyphicon glyphicon-edit"></span> Edit
-                                            </button>
-                                            <button disabled class="edit-modal btn btn-danger" @click.prevent="deleteItem(item)">
-                                                <span class="glyphicon glyphicon-trash"></span> Delete
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <div v-for="item in items">
+                                <ul>
+                                    <li>@{{ item.username }}</li>
+                                    <li>@{{ item.email }}</li>
+                                    <li>@{{ item.status }}</li>
+                                    <li>@{{ item.facebook_id }}</li>
+                                </ul>
                             </div>
+                            {{--<div class="table-responsive">--}}
+                                {{--<table class="table table-borderless">--}}
+                                    {{--<tr>--}}
+                                        {{--<th>username</th>--}}
+                                        {{--<th>email</th>--}}
+                                        {{--<th>status</th>--}}
+                                        {{--<th>facebook_id</th>--}}
+                                        {{--<th>Actions</th>--}}
+                                    {{--</tr>--}}
+                                    {{--<tr v-for="item in items">--}}
+                                        {{--<td>@{{ item.username }}</td>--}}
+                                        {{--<td>@{{ item.email }}</td>--}}
+                                        {{--<td>@{{ item.status }}</td>--}}
+                                        {{--<td>@{{ item.facebook_id }}</td>--}}
+                                        {{--<td>--}}
+                                            {{--<button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">--}}
+                                                {{--<span class="glyphicon glyphicon-edit"></span> Edit--}}
+                                            {{--</button>--}}
+                                            {{--<button disabled class="edit-modal btn btn-danger" @click.prevent="deleteItem(item)">--}}
+                                                {{--<span class="glyphicon glyphicon-trash"></span> Delete--}}
+                                            {{--</button>--}}
+                                        {{--</td>--}}
+                                    {{--</tr>--}}
+                                {{--</table>--}}
+                            {{--</div>--}}
                         </div>
 
                         <nav>
