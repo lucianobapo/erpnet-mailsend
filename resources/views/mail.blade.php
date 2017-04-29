@@ -20,7 +20,7 @@
 
                 <div class="panel-body" id="manage-vue">
                     <div class="row">
-                        <div v-for="item in items">
+                        <div v-for="item in items" class="col-md-12">
                             <div class="pull-right">
                                 <button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
                                     <span class="glyphicon glyphicon-edit"></span> Editar
@@ -29,7 +29,7 @@
                                     <span class="glyphicon glyphicon-trash"></span> Apagar
                                 </button>
                             </div>
-                            <ul class="well-sm">
+                            <ul>
                                 <li>@{{ item.username }}</li>
                                 <li>@{{ item.email }}</li>
                                 <li>@{{ item.status }}</li>
