@@ -23,6 +23,6 @@ class MailController extends Controller
     {
 
 
-        return view('mailsend:mail');
+        return view('mailsend::mail');
     }
 }
