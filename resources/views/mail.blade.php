@@ -34,12 +34,12 @@
                     {{--</div>--}}
                 {{--</div>--}}
                 <div class="panel-body" id="manage-vue">
-                    <h2>Lista de usuários:</h2>
+                    {{--<h2>Lista de usuários:</h2>--}}
                     <div class="row">
                         <div class="col-md-12">
                             <button type="button" data-toggle="modal" data-target="#create-item"
                                     class="btn btn-primary">
-                                Novo Item
+                                Nova Mensagem
                             </button>
                         </div>
                         <div v-for="item in items" class="col-md-12">
@@ -95,6 +95,13 @@
                                     <form method="post" enctype="multipart/form-data" v-on:submit.prevent="createItem">
 
                                         <div class="form-group">
+                                            <label for="from">Mensagem de:</label>
+                                            <input type="text" name="from" class="form-control" value="Tigresa VIP" v-model="newItem.from" />
+                                            <span v-if="formErrors['from']" class="error text-danger">
+                                                @{{ formErrors['from'] }}
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="title">Assunto da Mensagem:</label>
                                             <input type="text" name="title" class="form-control" value="Mensagem da Tigresa" v-model="newItem.title" />
                                             <span v-if="formErrors['title']" class="error text-danger">
@@ -109,7 +116,7 @@
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <label for="title">Mensagem:</label>
+                                            <label for="description">Mensagem:</label>
                                             <textarea name="description" class="form-control" v-model="newItem.description">
                                                 Hoje tenho novidades para todos!
                                             </textarea>
@@ -125,7 +132,7 @@
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-success">Submit</button>
+                                            <button type="submit" class="btn btn-success">Enviar Mensagem</button>
                                         </div>
                                     </form>
                                 </div>
