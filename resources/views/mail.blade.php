@@ -18,7 +18,12 @@
 
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-12"><textarea>Digite o conteúdo do email...</textarea></div>
+                        <div class="col-md-12">
+                            <form method="post" action="#">
+                                <textarea name="message">Digite o conteúdo do email...</textarea>
+                            </form>
+
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -32,16 +37,17 @@
                     <h2>Lista de usuários:</h2>
                     <div class="row">
                         <div class="col-md-12">
-                            <button disabled type="button" data-toggle="modal" data-target="#create-item" class="btn btn-primary">
+                            <button type="button" data-toggle="modal" data-target="#create-item"
+                                    class="btn btn-primary">
                                 Novo Item
                             </button>
                         </div>
                         <div v-for="item in items" class="col-md-12">
                             <div class="pull-right">
-                                <button disabled class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
+                                <button  class="edit-modal btn btn-warning" @click.prevent="editItem(item)">
                                     <span class="glyphicon glyphicon-edit"></span> Editar
                                 </button>
-                                <button disabled class="edit-modal btn btn-danger" @click.prevent="deleteItem(item)">
+                                <button  class="edit-modal btn btn-danger" @click.prevent="deleteItem(item)">
                                     <span class="glyphicon glyphicon-trash"></span> Apagar
                                 </button>
                             </div>
@@ -91,16 +97,16 @@
                                             <label for="title">Title:</label>
                                             <input type="text" name="title" class="form-control" v-model="newItem.username" />
                                             <span v-if="formErrors['title']" class="error text-danger">
-                @{{ formErrors['title'] }}
-              </span>
+                                                @{{ formErrors['title'] }}
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <label for="title">Description:</label>
                                             <textarea name="description" class="form-control" v-model="newItem.email">
-              </textarea>
+                                            </textarea>
                                             <span v-if="formErrors['description']" class="error text-danger">
-                @{{ formErrors['description'] }}
-              </span>
+                                                @{{ formErrors['description'] }}
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-success">Submit</button>

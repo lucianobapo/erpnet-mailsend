@@ -25,9 +25,15 @@ class MailController extends Controller
      *
      * @return \Illuminate\Contracts\View\View | \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $items = UserMailsend::paginate(3);
+        if($request->method()=="POST") {
+            (new \App\User([
+                'name'=>'teste',
+                'email'=>'luciano.bapo@gmail.com',
+            ]))->notify(new \App\Notifications\Email($request->only('message')));
+        }
+        $items = \App\User::paginate(3);
 
         $response = [
             'pagination' => [

@@ -31,6 +31,10 @@ $router->group($routeConfig, function(Router $router) {
         'uses' => 'MailController@manageVue',
         'as' => 'mail.manageVue',
     ]);
+    $router->post('mail', [
+        'uses' => 'MailController@manageVue',
+        'as' => 'mail.manageVue',
+    ]);
     $router->resource('vueitems', 'MailController');
 
 //    $router->resource('partners', 'PartnersController');
