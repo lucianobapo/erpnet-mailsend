@@ -57,10 +57,10 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required',
-        ]);
+//        $this->validate($request, [
+//            'title' => 'required',
+//            'description' => 'required',
+//        ]);
 
         $user = new \App\User([
             'name' => 'teste',
