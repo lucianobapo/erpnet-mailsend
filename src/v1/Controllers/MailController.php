@@ -62,7 +62,8 @@ class MailController extends Controller
             'description' => 'required',
         ]);
 
-        $create = UserMailsend::create($request->all());
+//        $create = \App\User::create($request->all());
+        $create = ['tr'];
 
         return response()->json($create);
     }

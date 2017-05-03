@@ -132,16 +132,16 @@
                                             <label for="title">Title:</label>
                                             <input type="text" name="title" class="form-control" v-model="fillItem.username" />
                                             <span v-if="formErrorsUpdate['title']" class="error text-danger">
-              @{{ formErrorsUpdate['title'] }}
-            </span>
+                                                @{{ formErrorsUpdate['title'] }}
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <label for="title">Description:</label>
                                             <textarea name="description" class="form-control" v-model="fillItem.email">
-            </textarea>
+                                            </textarea>
                                             <span v-if="formErrorsUpdate['description']" class="error text-danger">
-              @{{ formErrorsUpdate['description'] }}
-            </span>
+                                                @{{ formErrorsUpdate['description'] }}
+                                            </span>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-success">Submit</button>
