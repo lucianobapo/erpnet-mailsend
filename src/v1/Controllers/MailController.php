@@ -62,6 +62,7 @@ class MailController extends Controller
 //            'description' => 'required',
 //        ]);
 
+        logger($request->only('to'));
         $user = new \App\User([
             'name' => 'mensageiro',
             'email' => $request->only('to'),
