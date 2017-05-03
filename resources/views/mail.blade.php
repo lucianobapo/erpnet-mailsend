@@ -93,23 +93,25 @@
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" enctype="multipart/form-data" v-on:submit.prevent="createItem">
+
                                         <div class="form-group">
-                                            <label for="greeting">Introdução:</label>
-                                            <input type="text" name="greeting" class="form-control" v-model="newItem.greeting" />
-                                            <span v-if="formErrors['greeting']" class="error text-danger">
-                                                @{{ formErrors['greeting'] }}
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="title">Title:</label>
-                                            <input type="text" name="title" class="form-control" v-model="newItem.title" />
+                                            <label for="title">Assunto da Mensagem:</label>
+                                            <input type="text" name="title" class="form-control" value="Mensagem da Tigresa" v-model="newItem.title" />
                                             <span v-if="formErrors['title']" class="error text-danger">
                                                 @{{ formErrors['title'] }}
                                             </span>
                                         </div>
                                         <div class="form-group">
-                                            <label for="title">Description:</label>
+                                            <label for="greeting">Introdução:</label>
+                                            <input type="text" name="greeting" class="form-control" value="Olá," v-model="newItem.greeting" />
+                                            <span v-if="formErrors['greeting']" class="error text-danger">
+                                                @{{ formErrors['greeting'] }}
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="title">Mensagem:</label>
                                             <textarea name="description" class="form-control" v-model="newItem.description">
+                                                Hoje tenho novidades para todos!
                                             </textarea>
                                             <span v-if="formErrors['description']" class="error text-danger">
                                                 @{{ formErrors['description'] }}
@@ -117,7 +119,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="salutation">Saudação:</label>
-                                            <input type="text" name="salutation" class="form-control" v-model="newItem.salutation" />
+                                            <input type="text" name="salutation" class="form-control" value="Até a próxima pessoal, \nTigresa" v-model="newItem.salutation" />
                                             <span v-if="formErrors['salutation']" class="error text-danger">
                                                 @{{ formErrors['salutation'] }}
                                             </span>
