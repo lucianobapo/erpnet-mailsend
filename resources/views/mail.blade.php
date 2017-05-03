@@ -94,6 +94,13 @@
                                 <div class="modal-body">
                                     <form method="post" enctype="multipart/form-data" v-on:submit.prevent="createItem">
                                         <div class="form-group">
+                                            <label for="greeting">Introdução:</label>
+                                            <input type="text" name="greeting" class="form-control" v-model="newItem.greeting" />
+                                            <span v-if="formErrors['greeting']" class="error text-danger">
+                                                @{{ formErrors['greeting'] }}
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="title">Title:</label>
                                             <input type="text" name="title" class="form-control" v-model="newItem.title" />
                                             <span v-if="formErrors['title']" class="error text-danger">
@@ -106,6 +113,13 @@
                                             </textarea>
                                             <span v-if="formErrors['description']" class="error text-danger">
                                                 @{{ formErrors['description'] }}
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="salutation">Saudação:</label>
+                                            <input type="text" name="salutation" class="form-control" v-model="newItem.salutation" />
+                                            <span v-if="formErrors['salutation']" class="error text-danger">
+                                                @{{ formErrors['salutation'] }}
                                             </span>
                                         </div>
                                         <div class="form-group">
