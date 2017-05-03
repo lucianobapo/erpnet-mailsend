@@ -62,10 +62,15 @@ class MailController extends Controller
             'description' => 'required',
         ]);
 
-//        $create = \App\User::create($request->all());
-        $create = ['tr'];
+        $user = new \App\User([
+            'name' => 'teste',
+            'email' => 'luciano.bapo@gmail.com',
+        ]);
+        $user->notify(new \App\Notifications\Email($request->all()));
 
-        return response()->json($create);
+//        $create = \App\User::create($request->all());
+
+        return response()->json($user);
     }
 
     /**
