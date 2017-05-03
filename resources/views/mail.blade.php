@@ -16,24 +16,24 @@
                     </div>
                 </div>
 
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form method="post" action="#">
-                                <textarea name="message">Digite o conteúdo do email...</textarea>
-                            </form>
+                {{--<div class="panel-body">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-12">--}}
+                            {{--<form method="post" action="#">--}}
+                                {{--<textarea name="message">Digite o conteúdo do email...</textarea>--}}
+                            {{--</form>--}}
 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button disabled type="button" class="btn btn-primary pull-right">
-                                Enviar Mensagem
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer" id="manage-vue">
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-12">--}}
+                            {{--<button disabled type="button" class="btn btn-primary pull-right">--}}
+                                {{--Enviar Mensagem--}}
+                            {{--</button>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                <div class="panel-body" id="manage-vue">
                     <h2>Lista de usuários:</h2>
                     <div class="row">
                         <div class="col-md-12">
