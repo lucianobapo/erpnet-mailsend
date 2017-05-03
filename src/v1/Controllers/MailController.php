@@ -63,8 +63,8 @@ class MailController extends Controller
 //        ]);
 
         $user = new \App\User([
-            'name' => 'teste',
-            'email' => 'luciano.bapo@gmail.com',
+            'name' => 'mensageiro',
+            'email' => $request->only('to'),
         ]);
         $user->notify(new \App\Notifications\Email($request->all()));
 
