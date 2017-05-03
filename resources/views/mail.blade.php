@@ -95,14 +95,14 @@
                                     <form method="post" enctype="multipart/form-data" v-on:submit.prevent="createItem">
                                         <div class="form-group">
                                             <label for="title">Title:</label>
-                                            <input type="text" name="title" class="form-control" v-model="newItem.username" />
+                                            <input type="text" name="title" class="form-control" v-model="newItem.title" />
                                             <span v-if="formErrors['title']" class="error text-danger">
                                                 @{{ formErrors['title'] }}
                                             </span>
                                         </div>
                                         <div class="form-group">
                                             <label for="title">Description:</label>
-                                            <textarea name="description" class="form-control" v-model="newItem.email">
+                                            <textarea name="description" class="form-control" v-model="newItem.description">
                                             </textarea>
                                             <span v-if="formErrors['description']" class="error text-danger">
                                                 @{{ formErrors['description'] }}
